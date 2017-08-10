@@ -1,4 +1,4 @@
-import Conf from './_config'
+ import Conf from './_config'
 class Dot{
 	constructor(obj){
 		this.show=true;
@@ -10,6 +10,7 @@ class Dot{
 			G:255,
 			B:255,
 			Alpha:1,
+			v:1,
 			shadowColor:'#fff',
 			ctx:null
 		},obj);
@@ -58,6 +59,8 @@ class Dot{
         	this.conf.x+=Conf.dot.move_max_distance*Math.cos(this.move_angle);
 			this.conf.y-= Conf.dot.move_max_distance*Math.sin(this.move_angle);
 			this.conf.Alpha-=Conf.dot.a_reduce;
+			this.conf.v+=0.1;
+			this.conf.v=this.conf.v>3?3:this.conf.v;
         	this.draw();
         }
         

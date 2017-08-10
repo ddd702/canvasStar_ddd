@@ -1,6 +1,6 @@
 export default{
 	star:{
-		max_num:100,
+		max_num:70,
 		max_r:5,
 		move_distance:0.5	
 	},

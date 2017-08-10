@@ -110,9 +110,9 @@ class App {
         ctx.moveTo(previousDot1.conf.x, previousDot1.conf.y);
         ctx.beginPath();
         ctx.lineTo(dot.conf.x, dot.conf.y);
-        if (previousDot2 != false) ctx.lineTo(previousDot2.conf.x, previousDot2.conf.y);
-        if (previousDot3 != false) ctx.lineTo(previousDot3.conf.x, previousDot3.conf.y);
-        if (previousDot4 != false) ctx.lineTo(previousDot4.conf.x, previousDot4.conf.y);
+        if (previousDot2) ctx.lineTo(previousDot2.conf.x, previousDot2.conf.y);
+        if (previousDot3) ctx.lineTo(previousDot3.conf.x, previousDot3.conf.y);
+        if (previousDot4) ctx.lineTo(previousDot4.conf.x, previousDot4.conf.y);
         ctx.stroke();
         ctx.closePath();
     }
